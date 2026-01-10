@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+:root {
+  --background: #5A4636;
+  --foreground: #E8E4DD;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar - brand aligned */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #5A4636;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8E8577;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B7B2A8;
+}
+
+/* Brand typography utilities */
+.font-display {
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* Calm transitions - no bounce */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+

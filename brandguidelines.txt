@@ -1,0 +1,328 @@
+CouncilPAD — Brand Guidelines
+
+Tagline (working): Where wisdom becomes present
+
+1. Brand Essence
+What CouncilPAD Is
+
+CouncilPAD is a physical–digital thinking instrument.
+It turns presence, perspective, and intention into a usable interface.
+
+What CouncilPAD Is Not
+
+Not a chatbot
+
+Not a productivity app
+
+Not a gimmick
+
+Not “AI wisdom”
+
+Core Brand Feel
+
+Grounded
+
+Intentional
+
+Quietly powerful
+
+Human-scaled
+
+Timeless, not trendy
+
+Think: a modern council chamber meets a design lab.
+
+2. Visual Personality
+Design Keywords
+
+Flat
+
+Minimal
+
+Warm
+
+Modular
+
+Material-aware
+
+Calm authority
+
+Avoid:
+
+Gradients for the sake of gradients
+
+Overly ornate mysticism
+
+Corporate SaaS gloss
+
+Sci-fi neon
+
+3. Color Palette
+Primary Colors
+
+Council Wood
+
+Hex: #5A4636
+
+Usage: Backgrounds, large surfaces
+
+Feeling: grounded, physical, timeless
+
+Council Gold
+
+Hex: #D6B25E
+
+Usage: Accents, active states, highlights
+
+Feeling: value, presence, attention (not luxury)
+
+Charcoal Ink
+
+Hex: #1F1F1F
+
+Usage: Primary text
+
+Feeling: seriousness without harshness
+
+Secondary / UI Neutrals
+
+Warm Stone
+
+Hex: #E8E4DD
+
+Usage: Cards, panels, UI backgrounds
+
+Soft Ash
+
+Hex: #B7B2A8
+
+Usage: Disabled states, dividers
+
+Status Colors (Flat, Muted)
+
+Active / Present: #D6B25E (Gold)
+
+Idle / Absent: #8E8577
+
+Thinking / Processing: #6C7A89
+
+Warning / Tension: #C17C5A
+
+No bright reds. No neon greens.
+
+4. Typography
+Primary Typeface (Recommended)
+
+Inter
+
+Clean
+
+Modern
+
+Neutral
+
+Excellent for UI + long reading
+
+Weights:
+
+Regular (400) — body
+
+Medium (500) — labels
+
+Semibold (600) — headers
+
+Bold (700) — emphasis (use sparingly)
+
+Optional Display Typeface (Very Limited Use)
+
+Libre Baskerville or Cormorant
+
+For:
+
+Council names
+
+Plaques
+
+Ritual moments
+
+Never for UI body text
+
+5. Iconography
+Style
+
+Flat
+
+Stroke-based
+
+Rounded corners
+
+No shadows
+
+No gradients
+
+Icon Themes
+
+Circles
+
+Squares
+
+Grids
+
+Seats
+
+Presence markers
+
+Gentle geometric symbols
+
+Avoid:
+
+AI brain icons
+
+Lightning bolts
+
+Robot faces
+
+Mystical symbols unless abstracted
+
+6. Logo Usage
+Logo Characteristics
+
+Flat
+
+Minimal
+
+Works in monochrome
+
+Symbol-first, text-second
+
+Recommended Logo Lockups
+
+Symbol only (for hardware, NFC, favicon)
+
+Symbol + wordmark (for web)
+
+Clear Space Rule
+
+Leave at least the height of the “O” in CouncilPAD around the logo.
+
+7. UI Components
+Buttons
+
+Flat
+
+Rounded corners (8–12px)
+
+No drop shadows
+
+Hover = subtle color shift, not motion
+
+Primary CTA:
+
+Gold background
+
+Dark text
+
+Secondary:
+
+Outline only
+
+Wood or charcoal stroke
+
+Cards & Panels
+
+Warm stone background
+
+Subtle border (1px)
+
+No elevation unless necessary
+
+Council Seats
+
+Square or rounded-square frames
+
+Gold glow when active
+
+Dimmed wood tone when inactive
+
+Never flashy
+
+Presence should feel acknowledged, not celebrated.
+
+8. Motion & Interaction
+Motion Rules
+
+Slow
+
+Purposeful
+
+No bounce
+
+No playful easing
+
+Think:
+
+Fade
+
+Cross-dissolve
+
+Gentle pulse
+
+9. Voice & Tone (Very Important)
+Writing Style
+
+Calm
+
+Clear
+
+Grounded
+
+Non-performative
+
+Confident without hype
+
+Language Rules
+
+Avoid buzzwords
+
+Avoid over-explaining
+
+Avoid moralizing
+
+Avoid “AI will change everything” language
+
+Example Tone
+
+❌ “Harness the power of AI wisdom”
+✅ “Invite another perspective into the room”
+
+10. Brand Phrases (Use Sparingly)
+
+“Presence shapes perspective”
+
+“Who is at the table matters”
+
+“Do not collapse complexity prematurely”
+
+“A council, not a chatbot”
+
+“Wisdom becomes present”
+
+11. Hardware + Physical Alignment
+
+CouncilPAD’s digital brand must match the physical object:
+
+Wood textures → warm UI tones
+
+Brass plaques → gold accents
+
+Weight → restrained motion
+
+Ritual → intentional UX
+
+Nothing flashy.
+Nothing loud.
+Nothing disposable.
+
+12. One-Sentence Brand Summary
+
+CouncilPAD is a modern, flat, human-centered interface for holding multiple perspectives — designed to be touched, considered, and respected.

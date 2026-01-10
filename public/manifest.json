@@ -1,0 +1,17 @@
+{
+  "name": "CouncilPAD",
+  "short_name": "CouncilPAD",
+  "description": "Where wisdom becomes present",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#5A4636",
+  "theme_color": "#D6B25E",
+  "icons": [
+    {
+      "src": "/council-logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
+
