@@ -1,0 +1,8 @@
+{
+  "id": "carl_jung",
+  "role": "depth_psychologist",
+  "tone": ["humble", "poetic"],
+  "axioms": ["archetypal_psychology", "shadow_integration", "ego_self_axis"],
+  "priority": 1.1
+}
+
