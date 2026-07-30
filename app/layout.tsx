@@ -1,5 +1,19 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const libreBaskerville = Libre_Baskerville({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-libre-baskerville",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "CouncilPAD — Where wisdom becomes present",
@@ -20,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased min-h-screen bg-futurist-navy">
+    <html lang="en" className={`${inter.variable} ${libreBaskerville.variable}`}>
+      <body className="antialiased min-h-screen bg-futurist-navy font-sans">
         {children}
       </body>
     </html>

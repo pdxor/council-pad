@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
-
 :root {
   --background: #1A2F3D;
   --foreground: #F5F2E8;
@@ -12,7 +10,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Inter', system-ui, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,7 +35,7 @@ body {
 
 /* Brand typography utilities */
 .font-display {
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-libre-baskerville), serif;
 }
 
 /* Calm transitions - no bounce */
