@@ -1,9 +1,9 @@
 [build]
-  command = "node --version && npm --version && rm -rf .next node_modules/.cache && npm ci && npm run build:netlify"
+  command = "rm -rf .next node_modules/.cache && npm ci && npm ls next && npm run build:netlify"
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "20.11.0"
+  NODE_VERSION = "20"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
