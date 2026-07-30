@@ -34,42 +34,42 @@ export function AdvancedSettings({ settings, onSettingsChange }: AdvancedSetting
   };
 
   return (
-    <div className="bg-futurist-teal border border-futurist-muted/30 rounded-council overflow-hidden">
+    <div className="bg-futurist-white border border-futurist-border rounded-council overflow-hidden">
       {/* Header */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full flex items-center justify-between p-4 hover:bg-futurist-navy/30 transition-all duration-council"
+        className="w-full flex items-center justify-between p-4 hover:bg-futurist-light transition-all duration-council"
       >
         <div className="flex items-center gap-2">
-          <Settings className="w-5 h-5 text-futurist-gold" />
-          <span className="font-semibold text-futurist-cream uppercase tracking-wide">Advanced Settings</span>
+          <Settings className="w-5 h-5 text-futurist-teal" />
+          <span className="font-semibold text-futurist-dark-text">Advanced Settings</span>
         </div>
         {isExpanded ? (
-          <ChevronUp className="w-5 h-5 text-futurist-muted" />
+          <ChevronUp className="w-5 h-5 text-futurist-muted-text" />
         ) : (
-          <ChevronDown className="w-5 h-5 text-futurist-muted" />
+          <ChevronDown className="w-5 h-5 text-futurist-muted-text" />
         )}
       </button>
 
       {/* Content */}
       {isExpanded && (
-        <div className="p-4 pt-0 space-y-4 border-t border-futurist-muted/20">
+        <div className="p-4 pt-0 space-y-4 border-t border-futurist-border">
           {/* Response style toggles */}
           <div className="space-y-3">
-            <h4 className="text-sm font-semibold text-futurist-cream uppercase tracking-wide">Response Style</h4>
+            <h4 className="text-sm font-semibold text-futurist-dark-text">Response Style</h4>
             
             <label className="flex items-start gap-3 cursor-pointer group">
               <input
                 type="checkbox"
                 checked={settings.preserve_disagreement}
                 onChange={() => handleToggle('preserve_disagreement')}
-                className="mt-1 w-4 h-4 accent-futurist-gold cursor-pointer"
+                className="mt-1 w-4 h-4 accent-futurist-teal cursor-pointer"
               />
               <div>
-                <div className="text-futurist-cream group-hover:text-futurist-gold transition-colors">
+                <div className="text-futurist-dark-text group-hover:text-futurist-teal transition-colors">
                   Preserve Disagreement
                 </div>
-                <div className="text-xs text-futurist-muted">
+                <div className="text-xs text-futurist-muted-text">
                   Keep tensions visible
                 </div>
               </div>
@@ -80,13 +80,13 @@ export function AdvancedSettings({ settings, onSettingsChange }: AdvancedSetting
                 type="checkbox"
                 checked={settings.highlight_minority}
                 onChange={() => handleToggle('highlight_minority')}
-                className="mt-1 w-4 h-4 accent-futurist-gold cursor-pointer"
+                className="mt-1 w-4 h-4 accent-futurist-teal cursor-pointer"
               />
               <div>
-                <div className="text-futurist-cream group-hover:text-futurist-gold transition-colors">
+                <div className="text-futurist-dark-text group-hover:text-futurist-teal transition-colors">
                   Highlight Minority Views
                 </div>
-                <div className="text-xs text-futurist-muted">
+                <div className="text-xs text-futurist-muted-text">
                   Surface overlooked perspectives
                 </div>
               </div>
@@ -97,13 +97,13 @@ export function AdvancedSettings({ settings, onSettingsChange }: AdvancedSetting
                 type="checkbox"
                 checked={settings.avoid_moralizing}
                 onChange={() => handleToggle('avoid_moralizing')}
-                className="mt-1 w-4 h-4 accent-futurist-gold cursor-pointer"
+                className="mt-1 w-4 h-4 accent-futurist-teal cursor-pointer"
               />
               <div>
-                <div className="text-futurist-cream group-hover:text-futurist-gold transition-colors">
+                <div className="text-futurist-dark-text group-hover:text-futurist-teal transition-colors">
                   Avoid Moralizing
                 </div>
-                <div className="text-xs text-futurist-muted">
+                <div className="text-xs text-futurist-muted-text">
                   Focus on structural analysis
                 </div>
               </div>
@@ -114,13 +114,13 @@ export function AdvancedSettings({ settings, onSettingsChange }: AdvancedSetting
                 type="checkbox"
                 checked={settings.prioritize_nonhuman}
                 onChange={() => handleToggle('prioritize_nonhuman')}
-                className="mt-1 w-4 h-4 accent-futurist-gold cursor-pointer"
+                className="mt-1 w-4 h-4 accent-futurist-teal cursor-pointer"
               />
               <div>
-                <div className="text-futurist-cream group-hover:text-futurist-gold transition-colors">
+                <div className="text-futurist-dark-text group-hover:text-futurist-teal transition-colors">
                   Non-Human Perspectives
                 </div>
-                <div className="text-xs text-futurist-muted">
+                <div className="text-xs text-futurist-muted-text">
                   Center the more-than-human world
                 </div>
               </div>
@@ -131,13 +131,13 @@ export function AdvancedSettings({ settings, onSettingsChange }: AdvancedSetting
                 type="checkbox"
                 checked={settings.generate_followups}
                 onChange={() => handleToggle('generate_followups')}
-                className="mt-1 w-4 h-4 accent-futurist-gold cursor-pointer"
+                className="mt-1 w-4 h-4 accent-futurist-teal cursor-pointer"
               />
               <div>
-                <div className="text-futurist-cream group-hover:text-futurist-gold transition-colors">
+                <div className="text-futurist-dark-text group-hover:text-futurist-teal transition-colors">
                   Follow-up Questions
                 </div>
-                <div className="text-xs text-futurist-muted">
+                <div className="text-xs text-futurist-muted-text">
                   Include deepening questions
                 </div>
               </div>
@@ -145,8 +145,8 @@ export function AdvancedSettings({ settings, onSettingsChange }: AdvancedSetting
           </div>
 
           {/* Output format */}
-          <div className="space-y-3 pt-3 border-t border-futurist-muted/20">
-            <h4 className="text-sm font-semibold text-futurist-cream uppercase tracking-wide">Output Format</h4>
+          <div className="space-y-3 pt-3 border-t border-futurist-border">
+            <h4 className="text-sm font-semibold text-futurist-dark-text">Output Format</h4>
             
             <div className="space-y-2">
               {[
@@ -165,13 +165,13 @@ export function AdvancedSettings({ settings, onSettingsChange }: AdvancedSetting
                     value={format.value}
                     checked={settings.output_format === format.value}
                     onChange={() => handleOutputFormatChange(format.value as OutputFormat)}
-                    className="mt-1 w-4 h-4 accent-futurist-gold cursor-pointer"
+                    className="mt-1 w-4 h-4 accent-futurist-teal cursor-pointer"
                   />
                   <div>
-                    <div className="text-futurist-cream group-hover:text-futurist-gold transition-colors">
+                    <div className="text-futurist-dark-text group-hover:text-futurist-teal transition-colors">
                       {format.label}
                     </div>
-                    <div className="text-xs text-futurist-muted">
+                    <div className="text-xs text-futurist-muted-text">
                       {format.desc}
                     </div>
                   </div>

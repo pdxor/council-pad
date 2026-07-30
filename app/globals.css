@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #1A2F3D;
-  --foreground: #F5F2E8;
+  --background: #FFFFFF;
+  --foreground: #212529;
 }
 
 body {
@@ -15,22 +15,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar - futurist brand */
+/* Custom scrollbar - light futurist brand */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1A2F3D;
+  background: #F8F9FA;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5A6B75;
+  background: #DEE2E6;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8A9BA5;
+  background: #ADB5BD;
 }
 
 /* Brand typography utilities */
@@ -45,14 +45,14 @@ body {
 
 /* Futurist toolkit button styles */
 .btn-toolkit {
-  @apply px-6 py-3 border-2 border-futurist-gold rounded-council font-semibold uppercase tracking-wider text-sm transition-all duration-council;
+  @apply px-6 py-3 border border-futurist-teal rounded-council font-medium text-sm transition-all duration-council;
 }
 
 .btn-toolkit-primary {
-  @apply px-6 py-3 border-2 border-futurist-gold rounded-council font-semibold uppercase tracking-wider text-sm transition-all duration-council bg-transparent text-futurist-gold hover:bg-futurist-gold hover:text-futurist-navy;
+  @apply px-6 py-3 rounded-council font-medium text-sm transition-all duration-council bg-futurist-teal text-white hover:bg-futurist-navy;
 }
 
 .btn-toolkit-secondary {
-  @apply px-6 py-3 border-2 border-futurist-muted rounded-council font-semibold uppercase tracking-wider text-sm transition-all duration-council bg-transparent text-futurist-cream hover:border-futurist-cream hover:text-white;
+  @apply px-6 py-3 border border-futurist-border rounded-council font-medium text-sm transition-all duration-council bg-transparent text-futurist-dark-text hover:border-futurist-teal hover:text-futurist-teal;
 }
 

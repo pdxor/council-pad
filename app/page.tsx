@@ -153,13 +153,13 @@ export default function CouncilPage() {
   }, [selectedPreset, settings]);
 
   return (
-    <div className="min-h-screen bg-council-wood">
+    <div className="min-h-screen bg-futurist-light">
       {/* Header */}
-      <header className="border-b border-futurist-gold/20 bg-futurist-teal/30 backdrop-blur-sm">
+      <header className="border-b border-futurist-border bg-futurist-white">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <Logo variant="full" size="md" />
-            <p className="text-sm text-futurist-muted italic">
+            <p className="text-sm text-futurist-muted-text italic">
               Where wisdom becomes present
             </p>
           </div>
@@ -171,8 +171,8 @@ export default function CouncilPage() {
           {/* Left Column: Council & Scanner */}
           <div className="lg:col-span-2 space-y-8">
             {/* Council Table */}
-            <section className="bg-futurist-teal border border-futurist-muted/30 rounded-council p-8">
-              <h2 className="text-xl font-semibold text-futurist-cream mb-6 text-center">
+            <section className="bg-futurist-white border border-futurist-border rounded-council p-8">
+              <h2 className="text-xl font-semibold text-futurist-dark-text mb-6 text-center">
                 Active Council
               </h2>
               <CouncilTable 
@@ -190,8 +190,8 @@ export default function CouncilPage() {
             </section>
 
             {/* Question Input */}
-            <section className="bg-futurist-teal border border-futurist-muted/30 rounded-council p-6">
-              <h2 className="text-xl font-semibold text-futurist-cream mb-4">
+            <section className="bg-futurist-white border border-futurist-border rounded-council p-6">
+              <h2 className="text-xl font-semibold text-futurist-dark-text mb-4">
                 Ask the Council
               </h2>
               
@@ -199,14 +199,14 @@ export default function CouncilPage() {
                 <div className="flex gap-2">
                   <button
                     onClick={() => setShowQuestionLibrary(!showQuestionLibrary)}
-                    className="px-6 py-3 border-2 border-futurist-gold rounded-council font-semibold uppercase tracking-wider text-sm transition-all duration-council bg-transparent text-futurist-gold hover:bg-futurist-gold hover:text-futurist-navy"
+                    className="px-6 py-3 border border-futurist-teal rounded-council font-medium text-sm transition-all duration-council bg-transparent text-futurist-teal hover:bg-futurist-teal hover:text-white"
                   >
-                    {showQuestionLibrary ? 'HIDE LIBRARY' : 'QUESTION LIBRARY'}
+                    {showQuestionLibrary ? 'Hide Library' : 'Question Library'}
                   </button>
                 </div>
 
                 {showQuestionLibrary && (
-                  <div className="bg-futurist-navy/50 rounded-council p-4 border border-futurist-muted/20">
+                  <div className="bg-futurist-light rounded-council p-4 border border-futurist-border">
                     <QuestionLibrary 
                       onSelectQuestion={(q) => {
                         setQuestion(q);
@@ -221,24 +221,24 @@ export default function CouncilPage() {
                   onChange={(e) => setQuestion(e.target.value)}
                   placeholder="What question brings you to the council?"
                   rows={4}
-                  className="w-full bg-futurist-navy border border-futurist-muted/40 rounded-council px-4 py-3 text-futurist-cream placeholder-futurist-muted resize-none focus:outline-none focus:border-futurist-gold transition-all duration-council"
+                  className="w-full bg-futurist-white border border-futurist-border rounded-council px-4 py-3 text-futurist-dark-text placeholder-futurist-muted-text resize-none focus:outline-none focus:border-futurist-teal transition-all duration-council"
                 />
 
                 <button
                   onClick={handleAskCouncil}
                   disabled={isQuerying || activeMembers.length === 0 || !question.trim()}
-                  className="w-full py-4 border-2 border-futurist-gold rounded-council font-semibold uppercase tracking-wider text-sm transition-all duration-council bg-futurist-gold text-futurist-navy hover:bg-futurist-gold-light disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full py-4 rounded-council font-medium text-sm transition-all duration-council bg-futurist-teal text-white hover:bg-futurist-navy disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <div className="flex items-center justify-center gap-2">
                     {isQuerying ? (
                       <>
                         <Loader2 className="w-5 h-5 animate-spin" />
-                        CONSULTING...
+                        Consulting...
                       </>
                     ) : (
                       <>
                         <Send className="w-5 h-5" />
-                        ASK THE COUNCIL
+                        Ask the Council
                       </>
                     )}
                   </div>
@@ -248,18 +248,18 @@ export default function CouncilPage() {
 
             {/* Response */}
             {response && (
-              <section className="bg-futurist-teal border-2 border-futurist-gold/60 rounded-council p-6">
-                <h2 className="text-xl font-semibold text-futurist-cream mb-4">
+              <section className="bg-futurist-white border border-futurist-teal rounded-council p-6">
+                <h2 className="text-xl font-semibold text-futurist-dark-text mb-4">
                   Council Response
                 </h2>
                 
                 <div className="prose prose-council max-w-none">
-                  <div className="text-futurist-cream whitespace-pre-wrap leading-relaxed">
+                  <div className="text-futurist-dark-text whitespace-pre-wrap leading-relaxed">
                     {response.response_text}
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-futurist-muted/30 text-xs text-futurist-muted">
+                <div className="mt-6 pt-4 border-t border-futurist-border text-xs text-futurist-muted-text">
                   <div className="flex justify-between">
                     <span>Tokens: {response.tokens_used}</span>
                     <span>Fragments: {response.active_fragments.length}</span>
@@ -272,7 +272,7 @@ export default function CouncilPage() {
           {/* Right Column: Settings */}
           <div className="space-y-6">
             {/* Presets */}
-            <section className="bg-futurist-teal border border-futurist-muted/30 rounded-council p-6">
+            <section className="bg-futurist-white border border-futurist-border rounded-council p-6">
               <CouncilPresets
                 selectedPreset={selectedPreset}
                 onSelectPreset={setSelectedPreset}
@@ -288,21 +288,21 @@ export default function CouncilPage() {
             </section>
 
             {/* Info Panel */}
-            <section className="bg-futurist-teal border border-futurist-muted/30 rounded-council p-6">
-              <h3 className="text-lg font-semibold text-futurist-cream mb-3">
+            <section className="bg-futurist-white border border-futurist-border rounded-council p-6">
+              <h3 className="text-lg font-semibold text-futurist-dark-text mb-3">
                 How It Works
               </h3>
-              <div className="space-y-2 text-sm text-futurist-muted">
+              <div className="space-y-2 text-sm text-futurist-muted-text">
                 <p>
-                  <strong className="text-futurist-cream">Add statues</strong> to form the council
+                  <strong className="text-futurist-dark-text">Add statues</strong> to form the council
                 </p>
                 <p>
-                  <strong className="text-futurist-cream">Choose a lens</strong> to emphasize perspectives
+                  <strong className="text-futurist-dark-text">Choose a lens</strong> to emphasize perspectives
                 </p>
                 <p>
-                  <strong className="text-futurist-cream">Ask your question</strong> and receive wisdom
+                  <strong className="text-futurist-dark-text">Ask your question</strong> and receive wisdom
                 </p>
-                <p className="pt-3 text-xs italic text-futurist-muted-dark border-t border-futurist-muted/20 mt-3">
+                <p className="pt-3 text-xs italic text-futurist-muted-text border-t border-futurist-border mt-3">
                   Presence shapes perspective. Who is at the table matters.
                 </p>
               </div>

@@ -40,7 +40,7 @@ export function CouncilTable({
       <div className="relative aspect-square w-full">
         {/* Center circle decoration */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-1/3 h-1/3 rounded-full border-2 border-futurist-gold/30" />
+          <div className="w-1/3 h-1/3 rounded-full border border-futurist-border" />
         </div>
 
         {/* Council seats arranged in circle */}
@@ -75,34 +75,34 @@ export function CouncilTable({
               >
                 <div
                   className={`
-                    w-14 h-14 rounded-council border-2 flex items-center justify-center
+                    w-14 h-14 rounded-council border flex items-center justify-center
                     ${isActive 
-                      ? 'bg-futurist-gold border-futurist-gold' 
-                      : 'bg-futurist-navy border-futurist-muted'
+                      ? 'bg-futurist-teal border-futurist-teal' 
+                      : 'bg-futurist-light-gray border-futurist-border'
                     }
                     transition-all duration-council
                   `}
                 >
                   {isActive && (
-                    <div className="w-6 h-6 rounded-full bg-futurist-navy" />
+                    <div className="w-6 h-6 rounded-full bg-white" />
                   )}
                 </div>
 
                 {/* Member name tooltip */}
                 {isActive && isHovered && (
                   <div className="absolute top-full mt-3 left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="bg-futurist-teal border-2 border-futurist-gold rounded-council px-4 py-3 shadow-lg min-w-[200px]">
-                      <h3 className="text-futurist-cream font-semibold text-sm uppercase tracking-wide">
+                    <div className="bg-futurist-white border border-futurist-border rounded-council px-4 py-3 shadow-lg min-w-[200px]">
+                      <h3 className="text-futurist-dark-text font-semibold text-sm">
                         {seat.member?.statue_name || seat.member?.nfc_tag_id}
                       </h3>
-                      <p className="text-futurist-muted text-xs mt-1">
+                      <p className="text-futurist-muted-text text-xs mt-1">
                         {seat.member?.payload.role.replace(/_/g, ' ')}
                       </p>
                       <div className="flex gap-1 mt-2 flex-wrap">
                         {seat.member?.payload.axioms.slice(0, 3).map(axiom => (
                           <span
                             key={axiom}
-                            className="text-[10px] bg-futurist-navy/50 px-2 py-0.5 rounded text-futurist-gold"
+                            className="text-[10px] bg-futurist-light px-2 py-0.5 rounded text-futurist-teal"
                           >
                             {axiom.replace(/_/g, ' ')}
                           </span>
@@ -119,7 +119,7 @@ export function CouncilTable({
 
       {/* Active member count */}
       <div className="text-center mt-8">
-        <p className="text-futurist-muted text-sm font-medium uppercase tracking-wide">
+        <p className="text-futurist-muted-text text-sm font-medium">
           {activeMembers.length} of {maxSeats} present
         </p>
       </div>

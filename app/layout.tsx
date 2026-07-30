@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#1A2F3D',
+  themeColor: '#FFFFFF',
 };
 
 export default function RootLayout({
@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${libreBaskerville.variable}`}>
-      <body className="antialiased min-h-screen bg-futurist-navy font-sans">
+      <body className="antialiased min-h-screen bg-futurist-white font-sans">
         {children}
       </body>
     </html>

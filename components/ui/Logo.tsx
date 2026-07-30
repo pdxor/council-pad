@@ -32,7 +32,7 @@ export function Logo({ variant = 'full', size = 'md', className = '' }: LogoProp
 
   if (variant === 'wordmark') {
     return (
-      <span className={`font-display text-futurist-cream ${className}`}>
+      <span className={`font-display text-futurist-dark-text ${className}`}>
         CouncilPAD
       </span>
     );
@@ -47,7 +47,7 @@ export function Logo({ variant = 'full', size = 'md', className = '' }: LogoProp
         height={size === 'sm' ? 32 : size === 'md' ? 48 : 64}
         className={`${sizeClasses[size]} w-auto`}
       />
-      <span className={`font-semibold text-futurist-gold uppercase tracking-wider ${
+      <span className={`font-semibold text-futurist-teal ${
         size === 'sm' ? 'text-lg' : size === 'md' ? 'text-2xl' : 'text-3xl'
       }`}>
         CouncilPAD

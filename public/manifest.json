@@ -4,8 +4,8 @@
   "description": "Where wisdom becomes present",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1A2F3D",
-  "theme_color": "#D4A84B",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2D5A6A",
   "icons": [
     {
       "src": "/council-logo.png",

@@ -20,10 +20,10 @@ export function CouncilPresets({ selectedPreset, onSelectPreset }: CouncilPreset
 
   return (
     <div className="space-y-3">
-      <h3 className="text-lg font-semibold text-futurist-cream uppercase tracking-wide">
+      <h3 className="text-lg font-semibold text-futurist-dark-text">
         Council Lens
       </h3>
-      <p className="text-sm text-futurist-muted">
+      <p className="text-sm text-futurist-muted-text">
         Choose a perspective to emphasize
       </p>
 
@@ -33,22 +33,22 @@ export function CouncilPresets({ selectedPreset, onSelectPreset }: CouncilPreset
             key={preset.id}
             onClick={() => onSelectPreset(preset.id)}
             className={`
-              text-left p-4 rounded-council border-2 transition-all duration-council
+              text-left p-4 rounded-council border transition-all duration-council
               ${selectedPreset === preset.id
-                ? 'bg-futurist-gold/20 border-futurist-gold'
-                : 'bg-futurist-navy border-futurist-muted/40 hover:border-futurist-gold/60'
+                ? 'bg-futurist-teal/10 border-futurist-teal'
+                : 'bg-futurist-white border-futurist-border hover:border-futurist-teal'
               }
             `}
           >
             <div className="flex items-start gap-3">
               <span className="text-2xl">{preset.icon}</span>
               <div className="flex-1">
-                <h4 className={`font-semibold uppercase tracking-wide ${
-                  selectedPreset === preset.id ? 'text-futurist-gold' : 'text-futurist-cream'
+                <h4 className={`font-semibold ${
+                  selectedPreset === preset.id ? 'text-futurist-teal' : 'text-futurist-dark-text'
                 }`}>
                   {preset.name}
                 </h4>
-                <p className="text-sm text-futurist-muted mt-1">
+                <p className="text-sm text-futurist-muted-text mt-1">
                   {preset.description}
                 </p>
               </div>

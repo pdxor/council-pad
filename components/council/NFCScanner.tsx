@@ -136,29 +136,29 @@ export function NFCScanner({ onScanComplete, isDevelopment = true }: NFCScannerP
   };
 
   return (
-    <div className="bg-futurist-teal border border-futurist-muted/30 rounded-council p-6">
+    <div className="bg-futurist-white border border-futurist-border rounded-council p-6">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-semibold text-futurist-cream">
+        <h2 className="text-xl font-semibold text-futurist-dark-text">
           Add Council Member
         </h2>
         <button
           onClick={fetchStoredTags}
           disabled={isLoadingTags}
-          className="p-2 hover:bg-futurist-navy/30 rounded-council transition-all duration-council border border-futurist-gold/50 hover:border-futurist-gold"
+          className="p-2 hover:bg-futurist-light rounded-council transition-all duration-council"
           title="Refresh scanned tags"
         >
-          <RefreshCw className={`w-4 h-4 text-futurist-gold ${isLoadingTags ? 'animate-spin' : ''}`} />
+          <RefreshCw className={`w-4 h-4 text-futurist-teal ${isLoadingTags ? 'animate-spin' : ''}`} />
         </button>
       </div>
 
       {/* Show physically scanned tags first */}
       {storedTags.length > 0 && (
         <div className="mb-4">
-          <label className="block text-sm text-futurist-muted mb-2 font-medium uppercase tracking-wide">
+          <label className="block text-sm text-futurist-muted-text mb-2 font-medium">
             Scanned tags (from NFC reader):
           </label>
           <select
-            className="w-full bg-futurist-navy border-2 border-futurist-gold rounded-council px-4 py-2.5 text-futurist-cream focus:outline-none focus:border-futurist-gold-light transition-all duration-council font-medium"
+            className="w-full bg-futurist-white border border-futurist-teal rounded-council px-4 py-2.5 text-futurist-dark-text focus:outline-none focus:border-futurist-navy transition-all duration-council"
             value={selectedMockId}
             onChange={(e) => setSelectedMockId(e.target.value)}
             disabled={isScanning}
@@ -175,11 +175,11 @@ export function NFCScanner({ onScanComplete, isDevelopment = true }: NFCScannerP
 
       {isDevelopment && (
         <div className="mb-4">
-          <label className="block text-sm text-futurist-muted mb-2 font-medium uppercase tracking-wide">
+          <label className="block text-sm text-futurist-muted-text mb-2 font-medium">
             {storedTags.length > 0 ? 'Or select mock statue:' : 'Select mock statue (for testing):'}
           </label>
           <select
-            className="w-full bg-futurist-navy border border-futurist-muted/40 rounded-council px-4 py-2.5 text-futurist-cream focus:outline-none focus:border-futurist-gold transition-all duration-council"
+            className="w-full bg-futurist-white border border-futurist-border rounded-council px-4 py-2.5 text-futurist-dark-text focus:outline-none focus:border-futurist-teal transition-all duration-council"
             value={selectedMockId}
             onChange={(e) => setSelectedMockId(e.target.value)}
             disabled={isScanning}
@@ -199,18 +199,18 @@ export function NFCScanner({ onScanComplete, isDevelopment = true }: NFCScannerP
           <button
             onClick={handleStartScan}
             disabled={isDevelopment && !selectedMockId}
-            className="w-full py-4 border-2 border-futurist-gold rounded-council font-semibold uppercase tracking-wider text-sm transition-all duration-council bg-futurist-gold text-futurist-navy hover:bg-futurist-gold-light disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-3 rounded-council font-medium text-sm transition-all duration-council bg-futurist-teal text-white hover:bg-futurist-navy disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isDevelopment ? 'ADD TO COUNCIL' : 'SCAN NFC TAG'}
+            {isDevelopment ? 'Add to Council' : 'Scan NFC Tag'}
           </button>
         ) : (
           <button
             onClick={handleStopScan}
-            className="w-full py-4 border-2 border-futurist-accent rounded-council font-semibold uppercase tracking-wider text-sm transition-all duration-council bg-futurist-accent text-futurist-cream hover:bg-futurist-accent/80"
+            className="w-full py-3 rounded-council font-medium text-sm transition-all duration-council bg-futurist-accent text-white"
           >
             <div className="flex items-center justify-center gap-2">
               <Loader2 className="w-5 h-5 animate-spin" />
-              ADDING...
+              Adding...
             </div>
           </button>
         )}
@@ -219,19 +219,19 @@ export function NFCScanner({ onScanComplete, isDevelopment = true }: NFCScannerP
         {scanResult && (
           <div
             className={`
-              flex items-start gap-3 p-4 rounded-council border-2
+              flex items-start gap-3 p-4 rounded-council border
               ${scanResult.success 
-                ? 'bg-futurist-gold/10 border-futurist-gold' 
+                ? 'bg-futurist-teal/10 border-futurist-teal' 
                 : 'bg-futurist-warning/10 border-futurist-warning'
               }
             `}
           >
             {scanResult.success ? (
               <>
-                <CheckCircle className="w-5 h-5 text-futurist-gold flex-shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-futurist-teal flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-futurist-cream font-semibold uppercase tracking-wide">Member Added</p>
-                  <p className="text-futurist-muted text-sm mt-1">
+                  <p className="text-futurist-dark-text font-semibold">Member Added</p>
+                  <p className="text-futurist-muted-text text-sm mt-1">
                     {scanResult.payload?.id.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                   </p>
                 </div>
@@ -240,8 +240,8 @@ export function NFCScanner({ onScanComplete, isDevelopment = true }: NFCScannerP
               <>
                 <AlertCircle className="w-5 h-5 text-futurist-warning flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-futurist-cream font-semibold uppercase tracking-wide">Failed</p>
-                  <p className="text-futurist-muted text-sm mt-1">
+                  <p className="text-futurist-dark-text font-semibold">Failed</p>
+                  <p className="text-futurist-muted-text text-sm mt-1">
                     {scanResult.error}
                   </p>
                 </div>

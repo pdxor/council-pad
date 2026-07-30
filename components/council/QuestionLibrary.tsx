@@ -71,13 +71,13 @@ export function QuestionLibrary({
     <div className="space-y-4">
       {/* Search */}
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-futurist-muted" />
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-futurist-muted-text" />
         <input
           type="text"
           placeholder="Search questions..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full bg-futurist-navy border border-futurist-muted/40 rounded-council pl-10 pr-4 py-2 text-futurist-cream placeholder-futurist-muted focus:outline-none focus:border-futurist-gold transition-all duration-council"
+          className="w-full bg-futurist-white border border-futurist-border rounded-council pl-10 pr-4 py-2 text-futurist-dark-text placeholder-futurist-muted-text focus:outline-none focus:border-futurist-teal transition-all duration-council"
         />
       </div>
 
@@ -86,10 +86,10 @@ export function QuestionLibrary({
         <button
           onClick={() => setActiveCategory('all')}
           className={`
-            px-4 py-2 rounded-council text-sm font-semibold uppercase tracking-wide transition-all duration-council border-2
+            px-3 py-1.5 rounded-council text-sm font-medium transition-all duration-council border
             ${activeCategory === 'all'
-              ? 'bg-futurist-gold text-futurist-navy border-futurist-gold'
-              : 'bg-transparent text-futurist-muted hover:text-futurist-gold border-futurist-muted/40 hover:border-futurist-gold'
+              ? 'bg-futurist-teal text-white border-futurist-teal'
+              : 'bg-futurist-white text-futurist-muted-text hover:text-futurist-teal border-futurist-border hover:border-futurist-teal'
             }
           `}
         >
@@ -100,10 +100,10 @@ export function QuestionLibrary({
             key={key}
             onClick={() => setActiveCategory(key as QuestionCategory)}
             className={`
-              px-4 py-2 rounded-council text-sm font-semibold uppercase tracking-wide transition-all duration-council border-2
+              px-3 py-1.5 rounded-council text-sm font-medium transition-all duration-council border
               ${activeCategory === key
-                ? 'bg-futurist-gold text-futurist-navy border-futurist-gold'
-                : 'bg-transparent text-futurist-muted hover:text-futurist-gold border-futurist-muted/40 hover:border-futurist-gold'
+                ? 'bg-futurist-teal text-white border-futurist-teal'
+                : 'bg-futurist-white text-futurist-muted-text hover:text-futurist-teal border-futurist-border hover:border-futurist-teal'
               }
             `}
           >
@@ -116,11 +116,11 @@ export function QuestionLibrary({
       {/* Questions list */}
       <div className="space-y-2 max-h-96 overflow-y-auto">
         {loading ? (
-          <div className="text-center py-8 text-futurist-muted">
+          <div className="text-center py-8 text-futurist-muted-text">
             Loading questions...
           </div>
         ) : filteredQuestions.length === 0 ? (
-          <div className="text-center py-8 text-futurist-muted">
+          <div className="text-center py-8 text-futurist-muted-text">
             No questions found
           </div>
         ) : (
@@ -128,16 +128,16 @@ export function QuestionLibrary({
             <button
               key={question.id}
               onClick={() => handleQuestionClick(question)}
-              className="w-full text-left bg-futurist-navy hover:bg-futurist-gold/10 border-2 border-futurist-muted/30 hover:border-futurist-gold/60 rounded-council p-4 transition-all duration-council group"
+              className="w-full text-left bg-futurist-white hover:bg-futurist-light border border-futurist-border hover:border-futurist-teal rounded-council p-4 transition-all duration-council group"
             >
-              <p className="text-futurist-cream group-hover:text-futurist-gold transition-colors">
+              <p className="text-futurist-dark-text group-hover:text-futurist-teal transition-colors">
                 {question.question_text}
               </p>
               <div className="flex gap-2 mt-2">
                 {question.tags.slice(0, 3).map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs bg-futurist-teal/50 px-2 py-0.5 rounded text-futurist-muted"
+                    className="text-xs bg-futurist-light px-2 py-0.5 rounded text-futurist-muted-text"
                   >
                     {tag}
                   </span>
