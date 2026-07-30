@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -6,7 +6,12 @@ export const metadata: Metadata = {
   description: "A physical-digital thinking instrument. Not a chatbot. A council.",
   icons: {
     icon: '/council-logo.png',
+    apple: '/council-logo.png',
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#1A2F3D',
 };
 
 export default function RootLayout({
@@ -16,11 +21,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/council-logo.png" />
-        <link rel="apple-touch-icon" href="/council-logo.png" />
-        <meta name="theme-color" content="#1A2F3D" />
-      </head>
       <body className="antialiased min-h-screen bg-futurist-navy">
         {children}
       </body>

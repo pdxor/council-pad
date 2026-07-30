@@ -52,10 +52,10 @@ body {
 }
 
 .btn-toolkit-primary {
-  @apply btn-toolkit bg-transparent text-futurist-gold hover:bg-futurist-gold hover:text-futurist-navy;
+  @apply px-6 py-3 border-2 border-futurist-gold rounded-council font-semibold uppercase tracking-wider text-sm transition-all duration-council bg-transparent text-futurist-gold hover:bg-futurist-gold hover:text-futurist-navy;
 }
 
 .btn-toolkit-secondary {
-  @apply btn-toolkit bg-transparent text-futurist-cream border-futurist-muted hover:border-futurist-cream hover:text-white;
+  @apply px-6 py-3 border-2 border-futurist-muted rounded-council font-semibold uppercase tracking-wider text-sm transition-all duration-council bg-transparent text-futurist-cream hover:border-futurist-cream hover:text-white;
 }
 
