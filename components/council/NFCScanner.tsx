@@ -136,29 +136,29 @@ export function NFCScanner({ onScanComplete, isDevelopment = true }: NFCScannerP
   };
 
   return (
-    <div className="bg-council-warmstone border border-council-softash/30 rounded-council p-6">
+    <div className="bg-futurist-white border border-futurist-border rounded-council p-6">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-semibold text-council-charcoal">
+        <h2 className="text-xl font-semibold text-futurist-dark-text">
           Add Council Member
         </h2>
         <button
           onClick={fetchStoredTags}
           disabled={isLoadingTags}
-          className="p-2 hover:bg-council-wood/10 rounded-council transition-all duration-council"
+          className="p-2 hover:bg-futurist-light rounded-council transition-all duration-council"
           title="Refresh scanned tags"
         >
-          <RefreshCw className={`w-4 h-4 text-council-gold ${isLoadingTags ? 'animate-spin' : ''}`} />
+          <RefreshCw className={`w-4 h-4 text-futurist-teal ${isLoadingTags ? 'animate-spin' : ''}`} />
         </button>
       </div>
 
       {/* Show physically scanned tags first */}
       {storedTags.length > 0 && (
         <div className="mb-4">
-          <label className="block text-sm text-council-idle mb-2 font-medium">
+          <label className="block text-sm text-futurist-muted-text mb-2 font-medium">
             Scanned tags (from NFC reader):
           </label>
           <select
-            className="w-full bg-council-gold/10 border-2 border-council-gold rounded-council px-4 py-2.5 text-council-charcoal focus:outline-none focus:border-council-gold transition-all duration-council font-medium"
+            className="w-full bg-futurist-white border border-futurist-teal rounded-council px-4 py-2.5 text-futurist-dark-text focus:outline-none focus:border-futurist-navy transition-all duration-council"
             value={selectedMockId}
             onChange={(e) => setSelectedMockId(e.target.value)}
             disabled={isScanning}
@@ -166,7 +166,7 @@ export function NFCScanner({ onScanComplete, isDevelopment = true }: NFCScannerP
             <option value="">Choose a physically scanned member...</option>
             {storedTags.map((tag) => (
               <option key={tag.nfc_tag_id} value={tag.raw_payload.id}>
-                🏷️ {tag.statue_name || tag.raw_payload.id.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                {tag.statue_name || tag.raw_payload.id.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
               </option>
             ))}
           </select>
@@ -175,11 +175,11 @@ export function NFCScanner({ onScanComplete, isDevelopment = true }: NFCScannerP
 
       {isDevelopment && (
         <div className="mb-4">
-          <label className="block text-sm text-council-idle mb-2 font-medium">
+          <label className="block text-sm text-futurist-muted-text mb-2 font-medium">
             {storedTags.length > 0 ? 'Or select mock statue:' : 'Select mock statue (for testing):'}
           </label>
           <select
-            className="w-full bg-white border border-council-softash/40 rounded-council px-4 py-2.5 text-council-charcoal focus:outline-none focus:border-council-gold transition-all duration-council"
+            className="w-full bg-futurist-white border border-futurist-border rounded-council px-4 py-2.5 text-futurist-dark-text focus:outline-none focus:border-futurist-teal transition-all duration-council"
             value={selectedMockId}
             onChange={(e) => setSelectedMockId(e.target.value)}
             disabled={isScanning}
@@ -199,14 +199,14 @@ export function NFCScanner({ onScanComplete, isDevelopment = true }: NFCScannerP
           <button
             onClick={handleStartScan}
             disabled={isDevelopment && !selectedMockId}
-            className="w-full bg-council-gold text-council-charcoal font-semibold py-3 rounded-council hover:bg-council-gold/90 transition-all duration-council disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-3 rounded-council font-medium text-sm transition-all duration-council bg-futurist-teal text-white hover:bg-futurist-navy disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isDevelopment ? 'Add to Council' : 'Scan NFC Tag'}
           </button>
         ) : (
           <button
             onClick={handleStopScan}
-            className="w-full bg-council-thinking text-white font-semibold py-3 rounded-council hover:bg-council-thinking/80 transition-all duration-council"
+            className="w-full py-3 rounded-council font-medium text-sm transition-all duration-council bg-futurist-accent text-white"
           >
             <div className="flex items-center justify-center gap-2">
               <Loader2 className="w-5 h-5 animate-spin" />
@@ -221,27 +221,27 @@ export function NFCScanner({ onScanComplete, isDevelopment = true }: NFCScannerP
             className={`
               flex items-start gap-3 p-4 rounded-council border
               ${scanResult.success 
-                ? 'bg-council-gold/10 border-council-gold' 
-                : 'bg-council-tension/10 border-council-tension'
+                ? 'bg-futurist-teal/10 border-futurist-teal' 
+                : 'bg-futurist-warning/10 border-futurist-warning'
               }
             `}
           >
             {scanResult.success ? (
               <>
-                <CheckCircle className="w-5 h-5 text-council-gold flex-shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-futurist-teal flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-council-charcoal font-semibold">Member Added</p>
-                  <p className="text-council-idle text-sm mt-1">
+                  <p className="text-futurist-dark-text font-semibold">Member Added</p>
+                  <p className="text-futurist-muted-text text-sm mt-1">
                     {scanResult.payload?.id.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                   </p>
                 </div>
               </>
             ) : (
               <>
-                <AlertCircle className="w-5 h-5 text-council-tension flex-shrink-0 mt-0.5" />
+                <AlertCircle className="w-5 h-5 text-futurist-warning flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-council-charcoal font-semibold">Failed</p>
-                  <p className="text-council-idle text-sm mt-1">
+                  <p className="text-futurist-dark-text font-semibold">Failed</p>
+                  <p className="text-futurist-muted-text text-sm mt-1">
                     {scanResult.error}
                   </p>
                 </div>

@@ -20,10 +20,10 @@ export function CouncilPresets({ selectedPreset, onSelectPreset }: CouncilPreset
 
   return (
     <div className="space-y-3">
-      <h3 className="text-lg font-semibold text-council-charcoal">
+      <h3 className="text-lg font-semibold text-futurist-dark-text">
         Council Lens
       </h3>
-      <p className="text-sm text-council-idle">
+      <p className="text-sm text-futurist-muted-text">
         Choose a perspective to emphasize
       </p>
 
@@ -33,10 +33,10 @@ export function CouncilPresets({ selectedPreset, onSelectPreset }: CouncilPreset
             key={preset.id}
             onClick={() => onSelectPreset(preset.id)}
             className={`
-              text-left p-4 rounded-council border-2 transition-all duration-council
+              text-left p-4 rounded-council border transition-all duration-council
               ${selectedPreset === preset.id
-                ? 'bg-council-gold/20 border-council-gold'
-                : 'bg-white border-council-softash/40 hover:border-council-gold/60'
+                ? 'bg-futurist-teal/10 border-futurist-teal'
+                : 'bg-futurist-white border-futurist-border hover:border-futurist-teal'
               }
             `}
           >
@@ -44,11 +44,11 @@ export function CouncilPresets({ selectedPreset, onSelectPreset }: CouncilPreset
               <span className="text-2xl">{preset.icon}</span>
               <div className="flex-1">
                 <h4 className={`font-semibold ${
-                  selectedPreset === preset.id ? 'text-council-charcoal' : 'text-council-charcoal'
+                  selectedPreset === preset.id ? 'text-futurist-teal' : 'text-futurist-dark-text'
                 }`}>
                   {preset.name}
                 </h4>
-                <p className="text-sm text-council-idle mt-1">
+                <p className="text-sm text-futurist-muted-text mt-1">
                   {preset.description}
                 </p>
               </div>
