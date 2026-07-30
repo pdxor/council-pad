@@ -5,8 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
 
 :root {
-  --background: #5A4636;
-  --foreground: #E8E4DD;
+  --background: #1A2F3D;
+  --foreground: #F5F2E8;
 }
 
 body {
@@ -18,22 +18,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar - brand aligned */
+/* Custom scrollbar - futurist brand */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #5A4636;
+  background: #1A2F3D;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8E8577;
+  background: #5A6B75;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #B7B2A8;
+  background: #8A9BA5;
 }
 
 /* Brand typography utilities */
@@ -44,5 +44,18 @@ body {
 /* Calm transitions - no bounce */
 * {
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Futurist toolkit button styles */
+.btn-toolkit {
+  @apply px-6 py-3 border-2 border-futurist-gold rounded-council font-semibold uppercase tracking-wider text-sm transition-all duration-council;
+}
+
+.btn-toolkit-primary {
+  @apply btn-toolkit bg-transparent text-futurist-gold hover:bg-futurist-gold hover:text-futurist-navy;
+}
+
+.btn-toolkit-secondary {
+  @apply btn-toolkit bg-transparent text-futurist-cream border-futurist-muted hover:border-futurist-cream hover:text-white;
 }
 

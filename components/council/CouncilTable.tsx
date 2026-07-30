@@ -2,7 +2,7 @@
  * Council Table Component
  * 
  * Visual grid showing active council members
- * Brand: Flat, minimal, warm, calm authority
+ * Brand: Futurist Network - dark teal, gold accents
  */
 
 'use client';
@@ -40,7 +40,7 @@ export function CouncilTable({
       <div className="relative aspect-square w-full">
         {/* Center circle decoration */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-1/3 h-1/3 rounded-full border border-council-gold/30" />
+          <div className="w-1/3 h-1/3 rounded-full border-2 border-futurist-gold/30" />
         </div>
 
         {/* Council seats arranged in circle */}
@@ -77,32 +77,32 @@ export function CouncilTable({
                   className={`
                     w-14 h-14 rounded-council border-2 flex items-center justify-center
                     ${isActive 
-                      ? 'bg-council-gold border-council-gold' 
-                      : 'bg-council-wood border-council-idle'
+                      ? 'bg-futurist-gold border-futurist-gold' 
+                      : 'bg-futurist-navy border-futurist-muted'
                     }
                     transition-all duration-council
                   `}
                 >
                   {isActive && (
-                    <div className="w-6 h-6 rounded-full bg-council-wood" />
+                    <div className="w-6 h-6 rounded-full bg-futurist-navy" />
                   )}
                 </div>
 
                 {/* Member name tooltip */}
                 {isActive && isHovered && (
                   <div className="absolute top-full mt-3 left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="bg-council-warmstone border border-council-gold rounded-council px-4 py-3 shadow-lg min-w-[200px]">
-                      <h3 className="text-council-charcoal font-semibold text-sm">
+                    <div className="bg-futurist-teal border-2 border-futurist-gold rounded-council px-4 py-3 shadow-lg min-w-[200px]">
+                      <h3 className="text-futurist-cream font-semibold text-sm uppercase tracking-wide">
                         {seat.member?.statue_name || seat.member?.nfc_tag_id}
                       </h3>
-                      <p className="text-council-idle text-xs mt-1">
+                      <p className="text-futurist-muted text-xs mt-1">
                         {seat.member?.payload.role.replace(/_/g, ' ')}
                       </p>
                       <div className="flex gap-1 mt-2 flex-wrap">
                         {seat.member?.payload.axioms.slice(0, 3).map(axiom => (
                           <span
                             key={axiom}
-                            className="text-[10px] bg-council-wood/10 px-2 py-0.5 rounded text-council-wood"
+                            className="text-[10px] bg-futurist-navy/50 px-2 py-0.5 rounded text-futurist-gold"
                           >
                             {axiom.replace(/_/g, ' ')}
                           </span>
@@ -119,7 +119,7 @@ export function CouncilTable({
 
       {/* Active member count */}
       <div className="text-center mt-8">
-        <p className="text-council-idle text-sm font-medium">
+        <p className="text-futurist-muted text-sm font-medium uppercase tracking-wide">
           {activeMembers.length} of {maxSeats} present
         </p>
       </div>

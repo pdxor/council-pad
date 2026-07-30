@@ -19,9 +19,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/council-logo.png" />
         <link rel="apple-touch-icon" href="/council-logo.png" />
-        <meta name="theme-color" content="#D6B25E" />
+        <meta name="theme-color" content="#1A2F3D" />
       </head>
-      <body className="antialiased min-h-screen bg-council-wood">
+      <body className="antialiased min-h-screen bg-futurist-navy">
         {children}
       </body>
     </html>
